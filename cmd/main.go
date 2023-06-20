@@ -10,6 +10,8 @@ func main() {
 
 	app := fiber.New()
 
+	setupRoutes(app)
+
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Div Rhino Trivia App!")
 	})
